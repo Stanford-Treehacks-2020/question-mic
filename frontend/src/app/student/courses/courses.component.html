@@ -4,7 +4,7 @@
 
 <ul class="courses">
   <li *ngFor="let c of courses" routerLink="/student/courses/{{c.id}}">
-    <strong>{{c.id}}</strong><br>
-    <span>{{c.name}}</span>
+    <p style="font-size:40px">{{c.id}}</p><br>
+    <span style="color:grey">{{c.name}}</span>
   </li>
 </ul>
