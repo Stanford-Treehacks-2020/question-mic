@@ -1,8 +1,20 @@
-<div class="hello">
-<h1 style="font-size:150px">CS 188</h1>
+<div *ngIf="state.showQuestions">
+  <div class="hello">
+    <h1 style="font-size:150px">CS 188 Queue</h1>
+  </div>
+  <ul class="courses">
+    <li>Question 1</li>
+    <li>Question 2</li>
+    <li>Question 3</li>
+  </ul>
+</div>
+<div *ngIf="!state.showQuestions">
+  <div class="hello">
+    <h1 style="font-size:150px">CS 188</h1>
+  </div>
+  <button (click)="showQuestions()">Start Class</button>
 </div>
 
-<button>Start Class</button>
 
 <!--<button *ngIf="!started" (click)="play()">Play</button>-->
 <!--<button *ngIf="started" (click)="stop()">Stop</button>-->
