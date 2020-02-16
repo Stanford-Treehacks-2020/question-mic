@@ -11,11 +11,19 @@ export class LecCourseComponent implements OnInit {
 
   player: any;
 
+  state : any = {
+    showQuestions:false,
+  };
+
   started: boolean = false;
 
   constructor() {
     this.player = new WSAudioAPI.Player();
     // console.log(this.player);
+  }
+
+  showQuestions() {
+  this.state.showQuestions = true;
   }
 
   play() {
