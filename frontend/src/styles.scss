@@ -49,10 +49,10 @@ button {
 
 }
 .toolbar {
-  padding: 80px 15px 0px 15px;
+  padding: 5px;
   text-align: center;
-  font-size: 100px;
-
+  font-size: 20px;
+  background: rgba(0,0,0,0.2);
 }
 
 .buttons {
@@ -93,12 +93,6 @@ h1 {
 }
 
 .prof {
-  position: absolute;
-  width: 726px;
-  height: 103px;
-  left: 352px;
-  top: 100px;
-
   font-family: 'Open Sans', Arial, sans-serif;
   font-style: normal;
   font-weight: 600;
@@ -111,11 +105,6 @@ h1 {
 }
 
 .pemailtext {
-  position: absolute;
-  width: 486px;
-  height: 61px;
-  top: 230px;
-
   font-family: 'Open Sans', Arial, sans-serif;
   font-style: normal;
   font-weight: 600;
