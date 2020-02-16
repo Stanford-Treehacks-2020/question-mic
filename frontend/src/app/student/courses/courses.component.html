@@ -1,10 +1,10 @@
 <div class="hello">
-  <p>YOUR COURSES.</p>
+  YOUR COURSES.
 </div>
 
 <ul class="courses">
   <li *ngFor="let c of courses" routerLink="/student/courses/{{c.id}}">
-    <p style="font-size:40px">{{c.id}}</p><br>
-    <span style="color:grey">{{c.name}}</span>
+    <span class="id">{{c.id}}</span><br>
+    <span class="name">{{c.name}}</span>
   </li>
 </ul>

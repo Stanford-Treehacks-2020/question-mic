@@ -1,11 +1,9 @@
-
 <div class="hello">
-  <p>HELLO PROFESSOR.</p>
+  HELLO PROFESSOR.
 </div>
 
-<div class="emailtext">
-<p>Please enter your email</p>
-</div>
+<form (submit)="submit()">
+  <input placeholder="Please enter your email" class="email-input" type="text">
+  <button type="submit" style="display: none;"></button>
+</form>
 
-<input type="text">
-<button routerLink="/lecturer/auth">Submit</button>

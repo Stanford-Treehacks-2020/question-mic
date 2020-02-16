@@ -1,4 +1,4 @@
-<h1>CS 188</h1>
+<div class="hello">CS 188</div>
 
 <div [ngSwitch]="state.step">
 
@@ -86,16 +86,18 @@
     <p class="capital">{{state.started ? 'you are speaking' : 'please push the button to start speaking'}}</p>
 
 
-    <div class="mic" [ngClass]="{'active': state.started}" (click)="toggle()">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 76">
-        <g id="Layer_2" data-name="Layer 2">
-          <g id="Layer_2-2" data-name="Layer 2">
-            <path class="cls-1"
-                  d="M25,0A16,16,0,0,0,9,16V38a16,16,0,0,0,32,0V16A16,16,0,0,0,25,0Zm0,6A9.92,9.92,0,0,1,35,16V38a10,10,0,0,1-20,0V16A9.92,9.92,0,0,1,25,6ZM3,25a3.12,3.12,0,0,0-3,3.06v10A25,25,0,0,0,22,62.88V70H15a3,3,0,0,0,0,6H35a3,3,0,0,0,0-6H28V62.88A25,25,0,0,0,50,38.06v-10a3,3,0,1,0-6,0v10a19,19,0,0,1-38,0v-10A3.12,3.12,0,0,0,3,25Z"/>
+    <button (click)="toggle()" class="reset-button">
+      <div class="mic" [ngClass]="{'active': state.started}">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 76">
+          <g id="Layer_2" data-name="Layer 2">
+            <g id="Layer_2-2" data-name="Layer 2">
+              <path class="cls-1"
+                    d="M25,0A16,16,0,0,0,9,16V38a16,16,0,0,0,32,0V16A16,16,0,0,0,25,0Zm0,6A9.92,9.92,0,0,1,35,16V38a10,10,0,0,1-20,0V16A9.92,9.92,0,0,1,25,6ZM3,25a3.12,3.12,0,0,0-3,3.06v10A25,25,0,0,0,22,62.88V70H15a3,3,0,0,0,0,6H35a3,3,0,0,0,0-6H28V62.88A25,25,0,0,0,50,38.06v-10a3,3,0,1,0-6,0v10a19,19,0,0,1-38,0v-10A3.12,3.12,0,0,0,3,25Z"/>
+            </g>
           </g>
-        </g>
-      </svg>
-    </div>
+        </svg>
+      </div>
+    </button>
 
   </div>
 </div>

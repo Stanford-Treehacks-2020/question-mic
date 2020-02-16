@@ -1,36 +1,64 @@
 /* You can add global styles to this file, and also import other style files */
 body {
-  font-family: 'Arial';
+  font-family: 'Open Sans', Arial, sans-serif;
   background-color: #7E93A7;
   color: #C7DDE1;
-  font-size: 1em;
+  font-size: 2em;
   padding: 0;
   margin: 0;
   text-align: center;
 }
 
+/*
+RESET
+ */
+
+input[type=text] {
+  /* Remove First */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+input[type='text'],textarea {font-size:1em;}
+
+.reset-button {
+  border: none;
+  background: transparent;
+  box-shadow: none;
+}
+
+/*
+STYLE
+ */
+
+.container {
+  padding: 0;
+  margin: 0 auto;
+  max-width: 500px;
+}
 
 button {
+  -webkit-appearance: none;
+  border: none;
   background-color: #B1C7CC;
   color: #fff;
   border-radius: 20px;
   height: 50px;
   line-height: 50px;
   padding: 0 15px;
-  font-size: 300%;
+  font-size: 100%;
+
 }
 
 .courses {
   list-style: none;
   padding: 0;
-  margin: 0 auto;
-  max-width: 500px;
-
+  margin: 0;
 
   li {
     text-align: left;
 
-    padding: 15px 50px 70px 50px;
+    padding: 20px 30px 20px 30px;
     margin-bottom: 50px;
     cursor: pointer;
 
@@ -39,29 +67,42 @@ button {
     background: #F0F2F3;
     border-radius: 25px;
 
-    font-family: 'Open Sans', Arial, sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 30px;
-    line-height: 5px;
     letter-spacing: 0.05em;
 
     color: #0F0C35;
 
-    p {
-      font-weight: 550;
+    .id {
+      font-size: 120%;
     }
 
+    .name {
+      color: gray
+    }
 
+    p {
+      font-weight: 600;
+    }
   }
 
 }
 
 .toolbar {
-  padding: 5px;
+  cursor: pointer;
+  padding: 8px;
   text-align: center;
   font-size: 20px;
   background: rgba(0, 0, 0, 0.2);
+}
+
+.sub-toolbar {
+  cursor: pointer;
+  padding: 8px;
+  text-align: center;
+  font-size: 20px;
+  background: rgba(0, 0, 0, 0.1);
 }
 
 .buttons {
@@ -76,11 +117,10 @@ button {
   button {
     margin: 0 20px 20px 20px;
     height: 160px;
-    width: 388px;
+    width: 30vw;
     border-radius: 30px;
     box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.25);
   }
-
 }
 
 .white {
@@ -97,34 +137,43 @@ h1 {
   color: #EAF9FC;
   font-style: normal;
   font-weight: bold;
-  font-size: 100px;
+  font-size: 200%;
   line-height: 126px;
   text-align: center;
   letter-spacing: 0.1em;
 }
 
 .hello {
-  font-family: 'Open Sans', Arial, sans-serif;
   font-style: normal;
   font-weight: 600;
-  font-size: 64px;
-  line-height: 87px;
+  font-size: 250%;
+  padding: 50px 30px 15px 30px;
+  line-height: 140%;
   text-align: center;
   letter-spacing: 0.05em;
-
   color: #C7DDE1;
 }
 
-.emailtext {
-  font-family: 'Open Sans', Arial, sans-serif;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 28px;
-  line-height: 38px;
-  text-align: center;
-  letter-spacing: 0.05em;
-
-  color: #C7DDE1;
+.email-input {
+  /* white base */
+  border:none;
+  background: #F3F1F0;
+  box-shadow: 3px 10px 8px rgba(83, 83, 83, 0.62);
+  border-radius: 25px;
+  line-height: 40px;
+  width: 80%;
+  padding: 5px;
+  text-indent: 32px;
+  font-size: 34px;
+  font-weight: 500;
+}
+.full-size {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: #fff;
 }
 
 .capital {
@@ -238,5 +287,28 @@ h1 {
 
 /* Small devices */
 @media (max-width: 768px) {
+  body {
+    font-size: 1em;
+  }
 
+  .container {
+    padding: 0 15px;
+  }
+
+  .buttons {
+    top: 45%;
+
+    button {
+      font-style: normal;
+      font-weight: 600;
+      line-height: 41px;
+      text-align: center;
+      letter-spacing: 0.05em;
+      color: #FFFFFF;
+      font-size: 180%;
+      width: 70vw;
+      height: 100px;
+      margin-bottom: 50px;
+    }
+  }
 }
