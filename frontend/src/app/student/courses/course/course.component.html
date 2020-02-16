@@ -1,3 +1,7 @@
 <h1>CS 188</h1>
 
 <button>Raise Hand</button>
+
+
+<button *ngIf="!started" (click)="start()">Play</button>
+<button *ngIf="started" (click)="stop()">Stop</button>

@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+
+declare var WSAudioAPI: any;
 
 @Component({
   selector: 'app-lec-course',
@@ -7,10 +9,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LecCourseComponent implements OnInit {
 
+  player: any;
 
+  started: boolean = false;
 
+  constructor() {
+    this.player = new WSAudioAPI.Player();
+    // console.log(this.player);
+  }
 
-  constructor() { }
+  play() {
+    this.player.start();
+    this.started = true;
+  }
+
+  stop() {
+    this.player.stop();
+    this.started = false;
+  }
 
   ngOnInit() {
   }
