@@ -6,6 +6,7 @@ body {
   font-size: 20px;
   padding: 0;
   margin: 0;
+  text-align: center;
 }
 
 
@@ -21,6 +22,8 @@ button {
 
 .courses {
   list-style: none;
+  padding: 0px 500px;
+
 
   li {
     padding: 15px 20px 15px 20px;
@@ -29,17 +32,8 @@ button {
 
     box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.25);
 
-
-
-
-
     background: #F0F2F3;
     border-radius: 20px;
-
-
-
-
-
 
     font-family: 'Open Sans', Arial, sans-serif;
     font-style: normal;
@@ -53,4 +47,46 @@ button {
 
   }
 
+}
+.toolbar {
+  padding: 80px 15px 0px 15px;
+  text-align: center;
+  font-size: 100px;
+
+}
+
+.buttons {
+  margin: -80px 20px 0 20px;
+  position: absolute;
+  top: 50%;
+  text-align: center;
+  left: 0;
+  right: 0;
+  z-index: 2;
+
+  button {
+    margin: 0 20px;
+    height: 160px;
+    width: 388px;
+    border-radius: 30px;
+  }
+
+}
+
+.white {
+  background-color: #F6F6F6;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+h1 {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 100px;
+  line-height: 126px;
+  text-align: center;
+  letter-spacing: 0.1em;
 }
