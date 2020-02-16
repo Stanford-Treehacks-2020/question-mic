@@ -16,3 +16,13 @@ button {
   padding: 0 15px;
   font-size: 2em;
 }
+
+.courses {
+  list-style: none;
+
+  li {
+    margin-bottom: 20px;
+    cursor: pointer;
+  }
+
+}
