@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 
 declare var WSAudioAPI: any;
 
@@ -7,7 +7,7 @@ declare var WSAudioAPI: any;
   templateUrl: './lec-course.component.html',
   styleUrls: ['./lec-course.component.scss']
 })
-export class LecCourseComponent implements OnInit {
+export class LecCourseComponent implements OnInit, OnDestroy {
 
   questions = [
     {question: "Question 1", active: false},
@@ -58,15 +58,21 @@ export class LecCourseComponent implements OnInit {
 
   play() {
     this.player.start();
+    console.log('start listening');
     this.started = true;
   }
 
   stop() {
     this.player.stop();
+    console.log('stop listening');
     this.started = false;
   }
 
   ngOnInit() {
+  }
+
+  ngOnDestroy(): void {
+    this.stop();
   }
 
 }

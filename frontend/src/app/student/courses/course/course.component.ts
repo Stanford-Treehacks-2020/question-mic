@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 
 declare var WSAudioAPI: any;
 
@@ -7,7 +7,7 @@ declare var WSAudioAPI: any;
   templateUrl: './course.component.html',
   styleUrls: ['./course.component.scss']
 })
-export class CourseComponent implements OnInit {
+export class CourseComponent implements OnInit, OnDestroy {
 
   streamer: any;
   state: any = {
@@ -21,11 +21,13 @@ export class CourseComponent implements OnInit {
 
   start() {
     this.streamer.start();
+    console.log("start recording");
     this.state.started = true;
   }
 
   stop() {
     this.streamer.stop();
+    console.log("stop recording");
     this.state.started = false;
   }
 
@@ -51,6 +53,10 @@ export class CourseComponent implements OnInit {
 
 
   ngOnInit() {
+  }
+
+  ngOnDestroy(): void {
+    this.stop();
   }
 
 }
