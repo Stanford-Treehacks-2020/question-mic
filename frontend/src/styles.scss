@@ -1,10 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 body {
   font-family: 'Arial';
-  background-color: #ffffff;
+  background-color: #7E93A7;
+  color: #C7DDE1;
   font-size: 20px;
   padding: 0;
   margin: 0;
+  text-align: center;
 }
 
 
@@ -20,10 +22,90 @@ button {
 
 .courses {
   list-style: none;
+  padding: 0px 500px;
+
 
   li {
+    padding: 15px 20px 15px 20px;
     margin-bottom: 20px;
     cursor: pointer;
+
+    box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.25);
+
+    background: #F0F2F3;
+    border-radius: 20px;
+
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 27px;
+    letter-spacing: 0.05em;
+
+    color: #0F0C35;
+
+
   }
 
+}
+.toolbar {
+  padding: 80px 15px 0px 15px;
+  text-align: center;
+  font-size: 100px;
+
+}
+
+.buttons {
+  margin: -80px 20px 0 20px;
+  position: absolute;
+  top: 50%;
+  text-align: center;
+  left: 0;
+  right: 0;
+  z-index: 2;
+
+  button {
+    margin: 0 20px;
+    height: 160px;
+    width: 388px;
+    border-radius: 30px;
+    box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.25);
+  }
+
+}
+
+.white {
+  background-color: #F6F6F6;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+h1 {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 100px;
+  line-height: 126px;
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+
+.prof {
+  position: absolute;
+  width: 726px;
+  height: 103px;
+  left: 352px;
+  top: 312px;
+
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 64px;
+  line-height: 87px;
+  text-align: center;
+  letter-spacing: 0.05em;
+
+  color: #C7DDE1;
 }
