@@ -2,19 +2,20 @@ var https = require('https');
 var fs = require("fs");
 var WebSocketServer = require('ws').Server;
 
-var wsPort = 5000;
+var wsPort = 6001;
 var masterId;
 var listeners = {};
 
 var httpsServer = https.createServer({
-    key: fs.readFileSync('key.pem', 'utf8'),
-    cert: fs.readFileSync('cert.pem', 'utf8')
+    key: fs.readFileSync('/etc/letsencrypt/live/question-mic.repu.tools/privkey.pem', 'utf8'),
+    cert: fs.readFileSync('/etc/letsencrypt/live/question-mic.repu.tools/fullchain.pem', 'utf8')
 }).listen(wsPort);
 
 var wss = new WebSocketServer({ server: httpsServer });
 
-wss.on('connection', function (ws) {
-    var connectionId = ws.upgradeReq.headers['sec-websocket-key'];
+wss.on('connection', function (ws, req) {
+    var connectionId = req.headers['sec-websocket-key'];
+
     var isMaster = false;
 
     if (!masterId) {
@@ -25,6 +26,7 @@ wss.on('connection', function (ws) {
                 listeners[cid].send(message, {
                     binary: true
                 }, function (err) {
+                    console.log('send to ', cid);
                     if (err) {
                         console.log('Error: ', err);
                     }
@@ -39,13 +41,13 @@ wss.on('connection', function (ws) {
     }
 
     ws.on('close', function () {
-       if (isMaster) {
-           masterId = null;
-           console.log('Speaker disconnected');
-       } else {
-           delete listeners[connectionId];
-           console.log('Listener disconnected');
-       }
+        if (isMaster) {
+            masterId = null;
+            console.log('Speaker disconnected');
+        } else {
+            delete listeners[connectionId];
+            console.log('Listener disconnected');
+        }
     });
 });
 

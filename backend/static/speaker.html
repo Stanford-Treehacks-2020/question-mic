@@ -1,0 +1,32 @@
+<html>
+<head>
+</head>
+<body>
+<h1>Student</h1>
+<button onclick="streamer.start()">Start stream</button>
+<button onclick="streamer.stop()">Stop stream</button>
+<br>
+<br>
+<button href="#" class="mute" onclick="voiceMute()">Mute</button>
+
+</body>
+<script src="ws-audio-api.min.js"></script>
+<script>
+    var streamer = new WSAudioAPI.Streamer();
+    var mute = document.querySelector('.mute');
+
+    function voiceMute() {
+        if (mute.id == "") {
+            streamer.mute();
+            mute.id = "activated";
+            mute.innerHTML = "Unmute";
+        } else {
+            streamer.unMute();
+            mute.id = "";
+            mute.innerHTML = "Mute";
+        }
+    }
+</script>
+
+</body>
+</html>

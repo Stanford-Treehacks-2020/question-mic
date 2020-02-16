@@ -1,0 +1,22 @@
+<html>
+<body>
+<button onclick="start()">GO</button>
+<script>
+    function start() {
+        const constraints = {audio: true, video: false};
+        //---
+        console.log('navigator.mediaDevices...');
+        console.log(navigator.mediaDevices);
+        //---
+        navigator.mediaDevices.getUserMedia(constraints).then(function (stream) {
+            console.log('---');
+            console.log('# TEST # Inside Success Callback');
+        }).catch(function (err) {
+            console.log('---');
+            console.log('# TEST # Inside Error Callback');
+            console.log(err);
+        });
+    }
+</script>
+</body>
+</html>
