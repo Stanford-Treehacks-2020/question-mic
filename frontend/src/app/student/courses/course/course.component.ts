@@ -10,8 +10,10 @@ declare var WSAudioAPI: any;
 export class CourseComponent implements OnInit {
 
   streamer: any;
-
-  started : boolean = false;
+  state: any = {
+    step: 'initial',
+    started: false
+  };
 
   constructor() {
     this.streamer = new WSAudioAPI.Streamer();
@@ -19,11 +21,32 @@ export class CourseComponent implements OnInit {
 
   start() {
     this.streamer.start();
-    this.started = true;
+    this.state.started = true;
   }
+
   stop() {
     this.streamer.stop();
-    this.started = false;
+    this.state.started = false;
+  }
+
+  toggle() {
+    if (this.state.started) {
+      this.stop();
+    } else {
+      this.start();
+    }
+  }
+
+  raiseHand() {
+    this.state.step = 'raised';
+    setTimeout(() => {
+      this.ask();
+    }, 7300);
+  }
+
+  ask() {
+    this.state.step = 'ask';
+    this.start();
   }
 
 
