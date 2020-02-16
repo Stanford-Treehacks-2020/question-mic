@@ -3,7 +3,7 @@ body {
   font-family: 'Arial';
   background-color: #7E93A7;
   color: #C7DDE1;
-  font-size: 20px;
+  font-size: 1em;
   padding: 0;
   margin: 0;
   text-align: center;
@@ -17,7 +17,7 @@ button {
   height: 50px;
   line-height: 50px;
   padding: 0 15px;
-  font-size: 2em;
+  font-size: 120%;
 }
 
 .courses {
@@ -74,7 +74,7 @@ button {
   z-index: 2;
 
   button {
-    margin: 0 20px;
+    margin: 0 20px 20px 20px;
     height: 160px;
     width: 388px;
     border-radius: 30px;
@@ -233,4 +233,9 @@ h1 {
   100% {
     transform: rotate(0.0deg)
   }
+}
+
+/* Small devices */
+@media (max-width: 768px) {
+
 }
