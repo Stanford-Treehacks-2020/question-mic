@@ -48,11 +48,11 @@ We thank the treehacks team for the fantastic organisation and their support.
 * Sebastian Erhardt - Stanford
 
 # Screenshots
-![1](screenshots/0.png)
-![2](screenshots/1.png)
-![3](screenshots/2.png)
-![4](screenshots/3.png)
-![5](screenshots/4.png)
-![6](screenshots/5.png)
-![7](screenshots/6.png)
-![8](screenshots/7.png)
+<img src="screenshots/0.png" alt="image" width="250" />
+<img src="screenshots/1.png" alt="image" width="250" />
+<img src="screenshots/2.png" alt="image" width="250" />
+<img src="screenshots/3.png" alt="image" width="250" />
+<img src="screenshots/4.png" alt="image" width="250" />
+<img src="screenshots/5.png" alt="image" width="250" />
+<img src="screenshots/6.png" alt="image" width="250" />
+<img src="screenshots/7.png" alt="image" width="250" />
