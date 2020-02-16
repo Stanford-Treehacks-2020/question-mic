@@ -2,3 +2,6 @@
 
 
 <button>Start Course</button>
+
+<button *ngIf="!started" (click)="play()">Play</button>
+<button *ngIf="started" (click)="stop()">Stop</button>
