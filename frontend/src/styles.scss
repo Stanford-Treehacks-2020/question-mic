@@ -28,23 +28,29 @@ button {
 
 
   li {
-    padding: 15px 20px 15px 20px;
-    margin-bottom: 20px;
+    text-align: left;
+
+    padding: 15px 50px 70px 50px;
+    margin-bottom: 50px;
     cursor: pointer;
 
-    box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 8px 12px 8px rgba(0, 0, 0, 0.25);
 
     background: #F0F2F3;
-    border-radius: 20px;
+    border-radius: 25px;
 
     font-family: 'Open Sans', Arial, sans-serif;
     font-style: normal;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 27px;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 5px;
     letter-spacing: 0.05em;
 
     color: #0F0C35;
+
+    p {
+      font-weight: 550;
+    }
 
 
   }
@@ -87,6 +93,7 @@ button {
 }
 
 h1 {
+  font-family: 'Oxygen', Arial, sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 100px;
