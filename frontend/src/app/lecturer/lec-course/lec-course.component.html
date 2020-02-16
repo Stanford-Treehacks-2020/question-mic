@@ -1,18 +1,26 @@
 <div *ngIf="state.showQuestions">
   <div class="hello">
-    <h1 style="font-size:150px">CS 188 Queue</h1>
+    CS 188
   </div>
-  <ul class="courses">
-    <li>Question 1</li>
-    <li>Question 2</li>
-    <li>Question 3</li>
-  </ul>
+  <div *ngFor="let q of questions; let i = index">
+    <button class="question-button" [ngClass]="{'active': q.active}" (click)="toggle(i)">
+      {{q.question}}
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 74">
+        <g id="Layer_2" data-name="Layer 2">
+          <g id="Layer_1-2" data-name="Layer 1">
+            <path class="cls-1"
+                  d="M24,0A15,15,0,0,0,9,15V39a15,15,0,0,0,30,0V15A15,15,0,0,0,24,0ZM2,27a2.07,2.07,0,0,0-2,2V39A24,24,0,0,0,22,62.94V70H14a2,2,0,0,0,0,4H34a2,2,0,0,0,0-4H26V62.94A24,24,0,0,0,48,39V29a2,2,0,1,0-4,0V39A20,20,0,0,1,4,39V29a2.07,2.07,0,0,0-2-2Z"/>
+          </g>
+        </g>
+      </svg>
+    </button>
+  </div>
 </div>
 <div *ngIf="!state.showQuestions">
   <div class="hello">
-    <h1 style="font-size:150px">CS 188</h1>
+    CS 188
   </div>
-  <button (click)="showQuestions()">Start Class</button>
+  <button class="start-class-button" (click)="showQuestions()" class="capital">Start Class</button>
 </div>
 
 

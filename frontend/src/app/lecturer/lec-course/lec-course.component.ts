@@ -9,10 +9,16 @@ declare var WSAudioAPI: any;
 })
 export class LecCourseComponent implements OnInit {
 
+  questions = [
+    {question: "Question 1", active: false},
+    {question: "Question 2", active: false},
+    {question: "Question 3", active: false},
+  ];
+
   player: any;
 
-  state : any = {
-    showQuestions:false,
+  state: any = {
+    showQuestions: false,
   };
 
   started: boolean = false;
@@ -23,7 +29,31 @@ export class LecCourseComponent implements OnInit {
   }
 
   showQuestions() {
-  this.state.showQuestions = true;
+    this.state.showQuestions = true;
+  }
+
+  checkIfActive(): boolean {
+    let i = this.questions.length;
+    let active = false;
+    while (i--) {
+      if (this.questions[i].active) {
+        this.questions[i].active = false;
+        active = true;
+      }
+    }
+    return active;
+  }
+
+  toggle(index: number) {
+    if (this.checkIfActive()) {
+      this.stop();
+    }
+    if (this.questions[index].active) {
+      this.stop();
+    } else {
+      this.play();
+    }
+    this.questions[index].active = !this.questions[index].active;
   }
 
   play() {
